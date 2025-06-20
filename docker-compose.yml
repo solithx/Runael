@@ -1,0 +1,20 @@
+services:
+  database:
+    image: postgres:16
+    container_name: runael-db
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASS}
+    ports:
+      - 55432:5432
+    volumes:
+      - runael-db-data:/var/lib/postgresql/data
+    networks:
+      - runael-net
+
+networks:
+  runael-net:
+    driver: bridge
+
+volumes:
+  runael-db-data:

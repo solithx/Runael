@@ -28,3 +28,6 @@ logging:
   level:
     "[org.springframework.r2dbc.core]": DEBUG
     "[io.r2dbc.postgresql]": DEBUG
+
+jwt:
+  secret: "this-is-a-very-secure-secret-key-which-is-at-least-32-bytes-long"
